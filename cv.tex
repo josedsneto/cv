@@ -19,7 +19,7 @@
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
 % Change the page layout if you need to
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\geometry{left=1cm,right=1cm,top=0.8cm,bottom=0.8cm,columnsep=1cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -70,7 +70,7 @@
 
 \begin{document}
 \name{José de Deus e Silva Neto}
-\tagline{Recherche de stage de fin d’études — à partir de février 2026}
+\tagline{Busca de estágio de fim de curso — a partir de setembro de 2026}
 %% You can add multiple photos on the left or right
 % \photoR{2.8cm}{Globe_High}
 % \photoL{2.5cm}{Yacht_High,Suitcase_High}
@@ -78,9 +78,9 @@
 \personalinfo{%
   % Not all of these are required!
   \email{nectxx@gmail.com}
-  \phone{+33 (0)7 44 94 53 37}
+  \phone{+55 (91) 98565-6002}
   % \mailaddress{21, Avenue de Verdun}
-  \location{Valence, France}
+  \location{Belém, Pará, Brasil}
   %\homepage{www.homepage.com}
   %\twitter{@twitterhandle}
   \linkedin{jose-de-deus-neto}
@@ -108,7 +108,7 @@
 
 \makecvheader
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-% \AtBeginEnvironment{itemize}{\small}
+\AtBeginEnvironment{itemize}{\small\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}}
 
 %% Set the left/right column width ratio to 6:4.
 \columnratio{0.6}
@@ -116,32 +116,46 @@
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
-\cvsection{Exp\'erience}
+\cvsection{Experiência}
 
-\cvevent{Ing\'enieur en Cybersecurit\'e}{Grenoble INP - ESISAR, UGA | LCIS}{Septembre 2025 --- Pr\'esent}{Valence --- France}
+\cvevent{Desenvolvedor de Software}{Pulsar Audio SARL}{Fevereiro 2026 --- Agosto 2026}{Grenoble --- França}
 
 \begin{itemize}
-\item Amélioration d’une plateforme d’authentification matérielle basée sur des PUF (Physical
+\item Concepção de um gestionário de plugins de áudio utilizando Rust e o framework Tauri.
+\item Adoção de metodologia de desenvolvimento acelerado ("Vibe Coding").
+\item Validação, teste e documentação do software.
+\end{itemize}
+
+\divider
+
+\cvevent{Engenheiro de Cibersegurança}{Grenoble INP - ESISAR, UGA | LCIS}{Setembro 2025 --- Presente}{Valence --- França}
+
+\begin{itemize}
+\item Melhoria de uma plataforma de autenticação de hardware baseada em PUF (Physical
 Unclonable Function).
-\item Vérification de la robustesse face aux variations de température et analyse de la précision d’identification.
-\item Programmation de prototypes à l’aide de la chaîne d’outils ChipWhisperer.
+\item Verificação da robustez frente às variações de temperatura e análise da precisão de identificação.
+\item Programação de protótipos utilizando o conjunto de ferramentas ChipWhisperer.
 \end{itemize}
 
-\cvevent{D\'eveloppeur Firmware}{Grenoble INP - ESISAR, UGA | Olyntec}{January 2025 --- June 2025}{Valence --- France}
+\divider
+
+\cvevent{Desenvolvedor de Firmware}{Grenoble INP - ESISAR, UGA | Olyntec}{Janeiro 2025 --- Junho 2025}{Valence --- França}
 
 \begin{itemize}
-\item Rédaction de règles comportementales en C pour optimiser l’autonomie énergétique via la sélection de réseaux.
-\item Gestion des trames sur les réseaux LTE-M et LoRaWAN.
-\item Analyse des modes de basse consommation eDRX et PSM pour un prototype IoT.
-\item Géolocalisation à l’aide de la bibliothèque Uber/H3.
+\item Escrita de regras comportamentais em C para otimizar a autonomia energética através da seleção de redes.
+\item Gestão de pacotes de dados nas redes LTE-M e LoRaWAN.
+\item Análise dos modos de baixo consumo eDRX e PSM para um protótipo IoT.
+\item Geolocalização utilizando a biblioteca Uber/H3.
 \end{itemize}
 
-\cvevent{Chercheur 5G}{LASSE/UFPA | Ericsson}{June 2022 --- Septembre 2024}{Belém --- Br\'esil}
+\divider
+
+\cvevent{Pesquisador 5G}{LASSE/UFPA | Ericsson}{Junho 2022 --- Setembro 2024}{Belém --- Brasil}
 
 \begin{itemize}
-\item Contribution à une version interne du projet 
-\printinfoo{\faGithub}{PTP-DAL}[https://github.com/lasseufpa/ptp-dal], une bibliothèque Python d’analyse de jeux de données IEEE 1588 (Precision Time Protocol).
-\item Étude de la synchronisation d'un Fronthaul 5G utilisant des schémas TDD.
+\item Contribuição em uma versão interna do projeto 
+\printinfoo{\faGithub}{PTP-DAL}[https://github.com/lasseufpa/ptp-dal], uma biblioteca Python para análise de conjuntos de dados IEEE 1588 (Precision Time Protocol).
+\item Estudo da sincronização de um Fronthaul 5G utilizando esquemas TDD.
 %\item Deep neural networks programming with PyTorch.
 \end{itemize}
 
@@ -161,25 +175,26 @@ Unclonable Function).
 % % \item Power management techniques.
 % \end{itemize}
 
-\cvsection{Recherche}
+\cvsection{Pesquisa}
 
 \cvevent{Synchronization Algorithms for 5G and 6G Smarthauling}{CNPq/UFPA}{}{}
 \begin{itemize}
-\item Étude de techniques de synchronisation OTA pour les réseaux de nouvelle génération.
-\item Application du Deep Learning à l’amélioration de la synchronisation temporelle dans les architectures C-RAN.
-\item Distribution d’horloge à l’aide du projet Linux PTP.
+  \item Estudo de técnicas de sincronização OTA para redes de nova geração.
+  \item Aplicação de Deep Learning para a melhoria da sincronização temporal em arquiteturas C-RAN.
+  \item Distribuição de clock utilizando o projeto Linux PTP.
 \end{itemize}
 
-
-\cvsection{Formation}
-\cvevent{Double Dipl\^ome en Électronique, Informatique et Systèmes \& Ingénierie Électrique}{Grenoble INP - ESISAR, UGA \& Université Fédérale du Pará (UFPA)}
-{Septembre 2024 -- Pr\'esent}{}
-% \divider
 \switchcolumn
 
+\cvsection{Formação}
+\cvevent{Duplo Diploma em Eletrônica, Informática e Sistemas}{Grenoble INP - ESISAR, UGA}
+{Setembro 2024 -- Agosto 2026}{}
+
+\divider
+
+\cvevent{Bacharelado em Engenharia Elétrica}{Universidade Federal do Pará (UFPA)}{Fevereiro 2020 -- Presente}{}
+
 % \newpage
-% \cvevent{Licence d'ingénieur en Ingénierie Électrique}{Université Fédérale du Pará (UFPA)}{Février 
-% 2020 -- Pr\'esent}{}
 
 % \divider
 
@@ -233,16 +248,16 @@ Unclonable Function).
 %% page if the content is too long.
 % \switchcolumn
 
-\cvsection{Profil \& Objectifs}
+\cvsection{Perfil \& Objetivos}
 
 % \begin{quote}
 
-Étudiant passionné par l’intelligence artificielle, l’Internet des objets, les systèmes embarqués, les
-télécommunications et l’électronique. Fort de deux ans d’expérience en laboratoire de R\&D, je possède 
-une bonne capacité à travailler de manière autonome ou en équipe, ainsi que d’bonnes compétences
-rédactionnelles en anglais. Depuis un an en France, j’ai participé à un projet à visée commerciale en 
-collaboration avec une entreprise. Motivé, flexible et curieux, j’aime apprendre et relever de 
-nouveaux défis technologiques.
+Estudante apaixonado por programação, inteligência artificial, sistemas embarcados e eletrônica. 
+Nos últimos dois anos de intercâmbio na França, onde obtenho um duplo diploma, atuei em 
+diversos projetos e realizei um estágio prático em desenvolvimento de software. Anteriormente, 
+acumulei dois anos de experiência em um laboratório de P\&D. Essa vivência proporcionou uma 
+forte capacidade de adaptação, facilidade para o trabalho em equipe e autonomia, além de 
+boa habilidade de redação em inglês. Motivado e curioso, busco sempre aprender e superar novos desafios.
 
 %I'm curious and very excited about the new technologies in the AI era. As an international student a could accumulate
 %a very rich culture. Along my career I worked on software development, embedded  systems, IoT and ML. That includes 2 years
@@ -266,18 +281,20 @@ nouveaux défis technologiques.
 
 % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
 
-\cvsection{Compétences}
+\cvsection{Competências}
 
+\cvtag{Rust}
+\cvtag{TypeScript}
 \cvtag{Python}
-\cvtag{Linux}
+\cvtag{Linux} \\
 \cvtag{C/C++} 
 \cvtag{Git} 
-\cvtag{PyTorch}\\
+%\cvtag{PyTorch}\\
 \cvtag{VHDL}
-\cvtag{MATLAB}
+\cvtag{MATLAB} \\
 % \cvtag{Arduino} \\
 \cvtag{Java}
-\cvtag{Docker} \\
+\cvtag{Docker}
 \cvtag{DSP} 
 \cvtag{KiCad}
 % \cvtag{Lua}
@@ -288,36 +305,36 @@ nouveaux défis technologiques.
 % \cvtag{Vivado} \\
 % \cvtag{C/C++}\\
 
-\cvsection{Langues}
+\cvsection{Idiomas}
 
-\cvskill{Portuguais - Native}{5} %% Supports X.5 values.
+\cvskill{Português - Nativo}{5} %% Supports X.5 values.
 \divider
 
-\cvskill{Anglais - TOEIC B2}{4}
+\cvskill{Inglês - TOEIC B2}{4}
 \divider
 
-\cvskill{Français - TCF B2}{4}
+\cvskill{Francês - TCF B2}{4}
 \divider
 
-\cvskill{Allemand}{1.5} %% Supports X.5 values.
+%\cvskill{Alemão}{1.5} %% Supports X.5 values.
 
-\cvsection{Publications}
-\begin{itemize}
-    \item Neto, José. Silva, André. Campos, Matheus. Matos, Wendler. Silva, Orlando. (2021). Machine Learning models applied to breast cancer detection. \href{https://sbic.org.br/eventos/cbic_2021/cbic2021-154/}{10.21528/CBIC2021-154.} 
-\end{itemize}
+% \cvsection{Publicações}
+% \begin{itemize}
+%     \item Neto, José. Silva, André. Campos, Matheus. Matos, Wendler. Silva, Orlando. (2021). Machine Learning models applied to breast cancer detection. \href{https://sbic.org.br/eventos/cbic_2021/cbic2021-154/}{10.21528/CBIC2021-154.} 
+% \end{itemize}
 
 %% Yeah I didn't spend too much time making all the
 %% spacing consistent... sorry. Use \smallskip, \medskip,
 %% \bigskip, \vspace etc to make adjustments.
-\medskip
+%\medskip
 
 % \divider
 
-\cvsection{R\'ef\'erents}
+\cvsection{Referências}
 
 % \cvref{name}{email}{mailing address}
 \cvref{Prof.\ Aldebaro Klautau}{\href{https://www.lasse.ufpa.br/en}{LASSE/UFPA}}{aldebaro@ufpa.br}
-{66075110 - Belém, PA - Br\'esil}
+{66075110 - Belém, PA - Brasil}
 
 \end{paracol}
 
