@@ -1,0 +1,325 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6.5, 3 Nov 2022) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Bibliography was configured here previously, but is unused.
+
+\begin{document}
+\name{José de Deus e Silva Neto}
+\tagline{Recherche de stage de fin d’études — à partir de février 2026}
+%% You can add multiple photos on the left or right
+% \photoR{2.8cm}{Globe_High}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{nectxx@gmail.com}
+  \phone{+33 (0)7 44 94 53 37}
+  % \mailaddress{21, Avenue de Verdun}
+  \location{Valence, France}
+  %\homepage{www.homepage.com}
+  %\twitter{@twitterhandle}
+  \linkedin{jose-de-deus-neto}
+  \github{josedsneto}
+  %\orcid{0000-0000-0000-0000}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Exp\'erience}
+
+\cvevent{Ing\'enieur en Cybersecurit\'e}{Grenoble INP - ESISAR, UGA | LCIS}{Septembre 2025 --- Pr\'esent}{Valence --- France}
+
+\begin{itemize}
+\item Amélioration d’une plateforme d’authentification matérielle basée sur des PUF (Physical
+Unclonable Function).
+\item Vérification de la robustesse face aux variations de température et analyse de la précision d’identification.
+\item Programmation de prototypes à l’aide de la chaîne d’outils ChipWhisperer.
+\end{itemize}
+
+\cvevent{D\'eveloppeur Firmware}{Grenoble INP - ESISAR, UGA | Olyntec}{January 2025 --- June 2025}{Valence --- France}
+
+\begin{itemize}
+\item Rédaction de règles comportementales en C pour optimiser l’autonomie énergétique via la sélection de réseaux.
+\item Gestion des trames sur les réseaux LTE-M et LoRaWAN.
+\item Analyse des modes de basse consommation eDRX et PSM pour un prototype IoT.
+\item Géolocalisation à l’aide de la bibliothèque Uber/H3.
+\end{itemize}
+
+\cvevent{Chercheur 5G}{LASSE/UFPA | Ericsson}{June 2022 --- Septembre 2024}{Belém --- Br\'esil}
+
+\begin{itemize}
+\item Contribution à une version interne du projet 
+\printinfoo{\faGithub}{PTP-DAL}[https://github.com/lasseufpa/ptp-dal], une bibliothèque Python d’analyse de jeux de données IEEE 1588 (Precision Time Protocol).
+\item Étude de la synchronisation d'un Fronthaul 5G utilisant des schémas TDD.
+%\item Deep neural networks programming with PyTorch.
+\end{itemize}
+
+% \cvevent{Scholarship Student}{PET --- UFPA}{2021 --- 2022}{Belém --- Brazil}
+
+% \begin{itemize}
+% \item Lectures on Matlab, Arduino and AutoCad for electrical engineering students.
+% \item Writing of academic works for national meetings and conferences.
+
+% \end{itemize}
+
+% \cvevent{D\'eveloppeur PCB}{Robotech/UFPA}{Février 2020 --- Février 2021}{Belém --- Brésil}
+
+% \begin{itemize}
+% % \item KiCad and PCB design for competitive robotics in mini-sumo category.
+% \item Conception de circuits électroniques pour robots mini-sumo à l’aide de l’outil KiCad.
+% % \item Power management techniques.
+% \end{itemize}
+
+\cvsection{Recherche}
+
+\cvevent{Synchronization Algorithms for 5G and 6G Smarthauling}{CNPq/UFPA}{}{}
+\begin{itemize}
+\item Étude de techniques de synchronisation OTA pour les réseaux de nouvelle génération.
+\item Application du Deep Learning à l’amélioration de la synchronisation temporelle dans les architectures C-RAN.
+\item Distribution d’horloge à l’aide du projet Linux PTP.
+\end{itemize}
+
+
+\cvsection{Formation}
+\cvevent{Double Dipl\^ome en Électronique, Informatique et Systèmes \& Ingénierie Électrique}{Grenoble INP - ESISAR, UGA \& Université Fédérale du Pará (UFPA)}
+{Septembre 2024 -- Pr\'esent}{}
+% \divider
+\switchcolumn
+
+% \newpage
+% \cvevent{Licence d'ingénieur en Ingénierie Électrique}{Université Fédérale du Pará (UFPA)}{Février 
+% 2020 -- Pr\'esent}{}
+
+% \divider
+
+% \cvevent{PROEX - Pro-Rectory of Extension}{PROEX - UFPA}{2023}{}
+% \begin{itemize}
+%     \item \href{https://ufpabr-my.sharepoint.com/:b:/r/personal/jose_silva_neto_itec_ufpa_br/Documents/Documentos/Certificados/certificado_5g_ufpa_mar%C3%A7o_Jos%C3%A9%20de%20Deus%20e%20Silva%20Neto.pdf?csf=1&web=1&e=a5ibI0}{Training in 5G Technologies - Huawei adapted content HCIA - 5G}.
+% \end{itemize}
+
+% \cvevent{PROEX - Pro-Rectory of Extension}{PROEX - UFPA}{2023}{}
+% \begin{itemize}
+%     \item Taken Training in 5G Technologies - Huawei adapted content
+% HCIA - 5G.
+% \end{itemize}
+% \divider
+% \divider
+
+% \cvevent{Project 2}{Funding agency/institution}{Project duration}{}
+% A short abstract would also work.
+
+% \medskip
+
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+% \newpage
+
+% \cvsection{Publications}
+
+% %% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list. 
+% %% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+% %% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors. 
+% \mynames{Lim/Lian\bibnamedelima Tze,
+%   Wong/Lian\bibnamedelima Tze,
+%   Lim/Tracy,
+%   Lim/L.\bibnamedelimi T.}
+% %% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+
+% \nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+% \switchcolumn
+
+\cvsection{Profil \& Objectifs}
+
+% \begin{quote}
+
+Étudiant passionné par l’intelligence artificielle, l’Internet des objets, les systèmes embarqués, les
+télécommunications et l’électronique. Fort de deux ans d’expérience en laboratoire de R\&D, je possède 
+une bonne capacité à travailler de manière autonome ou en équipe, ainsi que d’bonnes compétences
+rédactionnelles en anglais. Depuis un an en France, j’ai participé à un projet à visée commerciale en 
+collaboration avec une entreprise. Motivé, flexible et curieux, j’aime apprendre et relever de 
+nouveaux défis technologiques.
+
+%I'm curious and very excited about the new technologies in the AI era. As an international student a could accumulate
+%a very rich culture. Along my career I worked on software development, embedded  systems, IoT and ML. That includes 2 years
+%of experience in R&D laboratory and 6 months being followed by a company in a industrial project. That allowed me to work
+%alone or as a team applying agile methods. Personally, I like being challenged and participating in multicultural %environments, where I can learn about the world and myself.
+
+%I'm highly interested in fields related to software development, embedded systems, telecommunication and artificial
+%intelligence. Beyond my professional skills, I consider empathy and communication strong points of my personality. I'm
+%always open to new challenges and opportunities and I am flexible to work as a team or by myself.
+% \end{quote}
+
+% \cvsection{Most Proud of}
+
+% \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+
+% \divider
+
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+% \divider
+
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+\cvsection{Compétences}
+
+\cvtag{Python}
+\cvtag{Linux}
+\cvtag{C/C++} 
+\cvtag{Git} 
+\cvtag{PyTorch}\\
+\cvtag{VHDL}
+\cvtag{MATLAB}
+% \cvtag{Arduino} \\
+\cvtag{Java}
+\cvtag{Docker} \\
+\cvtag{DSP} 
+\cvtag{KiCad}
+% \cvtag{Lua}
+% \cvtag{JavaScript}\\
+% \cvtag{IEEE 1588}
+% \cvtag{Fronthaul 5G} 
+% \cvtag{FPGA}
+% \cvtag{Vivado} \\
+% \cvtag{C/C++}\\
+
+\cvsection{Langues}
+
+\cvskill{Portuguais - Native}{5} %% Supports X.5 values.
+\divider
+
+\cvskill{Anglais - TOEIC B2}{4}
+\divider
+
+\cvskill{Français - TCF B2}{4}
+\divider
+
+\cvskill{Allemand}{1.5} %% Supports X.5 values.
+
+\cvsection{Publications}
+\begin{itemize}
+    \item Neto, José. Silva, André. Campos, Matheus. Matos, Wendler. Silva, Orlando. (2021). Machine Learning models applied to breast cancer detection. \href{https://sbic.org.br/eventos/cbic_2021/cbic2021-154/}{10.21528/CBIC2021-154.} 
+\end{itemize}
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+% \divider
+
+\cvsection{R\'ef\'erents}
+
+% \cvref{name}{email}{mailing address}
+\cvref{Prof.\ Aldebaro Klautau}{\href{https://www.lasse.ufpa.br/en}{LASSE/UFPA}}{aldebaro@ufpa.br}
+{66075110 - Belém, PA - Br\'esil}
+
+\end{paracol}
+
+
+\end{document}

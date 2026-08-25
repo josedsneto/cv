@@ -1,0 +1,33 @@
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.toc
+*.vrb
+*.xdv
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+*.xmpi
+*.pdf
+
+# Logs
+*.log
+
+# Editor/OS specific
+.DS_Store
+.vscode/
+*.swp
+*~
